@@ -3,7 +3,7 @@ is_armstrong_number : main.o
 main.o : main.c
 	gcc -c main.c
 clean-reports:
-	rm reports/cppcheck/*
+	rm -f reports/cppcheck/*
 clean: clean-reports
 	rm main.o is_armstrong_number
 
