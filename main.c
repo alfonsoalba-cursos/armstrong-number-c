@@ -56,3 +56,7 @@ int pop(){
 		return(j);   
 	}
 }
+
+void cpp_check_warning_function(){
+	return stack[max];
+}
