@@ -1,7 +1,9 @@
-is_armstrong_number : main.o stack.o 
-	gcc main.o stack.o -o is_armstrong_number -lm 
+is_armstrong_number : main.o stack.o armstrong.o
+	gcc main.o stack.o armstrong.o -o is_armstrong_number -lm 
 main.o : main.c
 	gcc -c main.c
+armstrong.o : armstrong.c
+	gcc -c armstrong.c
 stack.o : stack.c
 	gcc -c stack.c	
 clean-reports:
