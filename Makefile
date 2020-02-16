@@ -15,3 +15,5 @@ cppcheck-xml :
 	cppcheck *.c --xml --xml-version=2 --enable=all --inconclusive --language=c *.c 2>reports/cppcheck/report.xml
 cppcheck : 
 	cppcheck *.c --enable=all --inconclusive --language=c *.c
+doc:
+	doxygen
