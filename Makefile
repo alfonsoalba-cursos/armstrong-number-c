@@ -12,6 +12,7 @@ clean-objects:
 	rm -f main.o stack.o armstrong.o
 clean-reports:
 	rm -f reports/cppcheck/*
+	rm -f reports/cmocka/*
 
 clean-tests:
 	rm -rf tests/build/*
@@ -27,4 +28,8 @@ doc:
 
 tests: clean armstrong.o stack.o
 	gcc tests/test_is_armstrong_number.c armstrong.o stack.o -lm -lcmocka -o tests/build/test_is_armstrong_number
-	./tests/build/test_is_armstrong_number 
+	CMOCKA_MESSAGE_OUTPUT=stdout CMOCKA_XML_FILE='' ./tests/build/test_is_armstrong_number 
+
+tests-xml: clean armstrong.o stack.o
+	gcc tests/test_is_armstrong_number.c armstrong.o stack.o -lm -lcmocka -o tests/build/test_is_armstrong_number
+	CMOCKA_XML_FILE=reports/cmocka/%g.xml CMOCKA_MESSAGE_OUTPUT=xml ./tests/build/test_is_armstrong_number 
