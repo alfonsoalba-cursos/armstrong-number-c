@@ -5,27 +5,8 @@
  */
 # include <stdio.h>
 # include <math.h>
+# include "stack.h"
 
-/**
- * Número máximo de elementos que pueden almacenarse en el stack auxiliar.
- *
- * 
- */
-#define max 20
-
-/**
- * Variable que contiene el índice del último elemento introducido en el stack
- */ 
-int top=-1;
-
-/**
- * Array que se utiliza para hacer el cálculo que permite saber si un número
- * es un número de Armstrong.
- * 
- */
-int stack[max];
-void push(int);
-int pop();
 int is_armstrong_number(int );
 
 /**
@@ -64,32 +45,4 @@ int is_armstrong_number(int numb){
 		return 1;   
 	else 
 		return 0;
-}
-
-/**
- * Introduce un elemento en el stack
- */ 
-void push(int m){   
-	top++;   
-	stack[top]=m;
-}
-
-
-/**
- * Saca un elemento del stack
- */
-int pop(){   
-	int j;   
-	if(top==-1)
-		return(top);   
-	else   
-	{      
-		j=stack[top];      
-		top--;      
-		return(j);   
-	}
-}
-
-void cpp_check_warning_function(){
-	return stack[max];
 }
