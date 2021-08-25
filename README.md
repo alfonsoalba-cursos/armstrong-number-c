@@ -7,19 +7,19 @@ _spanish version_
 
 Este código es utilizado en diferentes cursos.
 
-# Compilar
+## Compilar
 
 ```bash
 > make
 ```
 
-# Ejecutar el código
+## Ejecutar el código
 
 ```bash
 > ./is_armstrong_number
 ```
 
-# Limpiar
+## Limpiar
 
 ```bash
 > make clean
@@ -31,19 +31,19 @@ _english version_
 
 This code is used in several courses.
 
-# Compile
+## Compile
 
 ```bash
 > make
 ```
 
-# Run the code
+## Run the code
 
 ```bash
 > ./is_armstrong_number
 ```
 
-# Clean
+## Clean
 
 ```bash
 > make clean
