@@ -23,7 +23,7 @@ extern int top;
  * es un número de Armstrong.
  * 
  */
-int stack[max];
+extern int stack[max];
 
 /**
  * Introduce un elemento en el stack
