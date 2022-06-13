@@ -1,5 +1,6 @@
 #include "stack.h"
 
+int stack[max];
 int top=-1;
 
 void push(int m){   
